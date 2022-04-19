@@ -1,12 +1,16 @@
 <?php
 ?>
+
 <!DOCTYPE html>
 <html>
 <head>
 <title>Aap ForLoop</title>
 </head>
 <body>
-<img src="/img/aap1.jpg" width="280" height="125" title="" alt="" />
+<?php
+    for($i = 1; $i<=9 ;$i++) {
+        echo "<img src='img/aap".$i.".jpg'>";
+    }
+?>
 </body>
-
-</html>';
+</html>
