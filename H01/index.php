@@ -1,3 +1,4 @@
 <?php
 
-echo "Woof";
+echo "Hello World!";
+echo "<br> *wave wave*";
