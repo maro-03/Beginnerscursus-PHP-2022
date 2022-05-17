@@ -1,22 +1,21 @@
 <?php
 $personenPerIcoon = 5;
-$zwemclubs = array();
-$zwemclubs[0] = array("De Spartelkuikens" == 25);
-$zwemclubs[1] = array("De Waterbuffels" == 32);
-$zwemclubs[2] = array("Plonsmderin" == 11);
-$zwemclubs[3] = array("Bommetje" == 23);
-
-//$zwemclubs = [
-//    "De Spartelkuikens" == 25,
-//    "De Waterbuffels" == 32,
-//    "Plonsmderin" == 11,
-//    "Bommetje" == 23
-//];
-
-//print_r($zwemclubs);
-    foreach($zwemclubs as $zwemclub)
-//print_r($zwemclub);
-        $temp =  $zwemclub / $personenPerIcoon;
-    echo $temp;
-    for ($i = 0; $i < $temp; $i++) echo $zwemclubs = '<img src="img3/swimmer.jpg"';
+$icoon = ["url" => "https://www.freeiconspng.com/thumbs/swimming-icon-png/sports-swimming-icon-png-1.png", "size" => "30px"];
+$zwemclubs = [
+    ["club" => "De Spartelkuikens", "aantal" => 25,],
+    ["club" => "De Waterbuffels", "aantal" => 32],
+    ["club" => "Plonsmderin", "aantal" => 11],
+    ["club" => "Bommetje", "aantal" => 23]
+];
+foreach ($zwemclubs as $i => $zwemclub) {
+        $zwemclubs[$i]["icoon"] = floor($zwemclub["aantal"] / $personenPerIcoon);
+}
 ?>
+<ul>
+    <?php foreach ($zwemclubs as $zwemclub) : ?>
+    <li>
+        <?= $zwemclub["club"] ?>
+        <?= str_repeat('<img src="' . $icoon["url"] . '" width="' . $icoon["size"] . '">', $zwemclub["icoon"]) ?>
+    </li>
+    <?php endforeach ?>
+</ul>
