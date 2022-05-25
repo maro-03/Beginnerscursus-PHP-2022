@@ -1,4 +1,4 @@
-<?php
+<?php 
 $personenPerIcoon = 5;
 $icoon = ["url" => "https://www.freeiconspng.com/thumbs/swimming-icon-png/sports-swimming-icon-png-1.png", "size" => "30px"];
 $zwemclubs = [
