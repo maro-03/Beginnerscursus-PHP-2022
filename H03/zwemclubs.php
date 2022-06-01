@@ -8,7 +8,7 @@ $zwemclubs = [
     ["club" => "Bommetje", "aantal" => 23]
 ];
 foreach ($zwemclubs as $i => $zwemclub) {
-        $zwemclubs[$i]["icoon"] = floor($zwemclub["aantal"] / $personenPerIcoon);
+    $zwemclubs[$i]["icoon"] = floor($zwemclub["aantal"] / $personenPerIcoon);
 }
 ?>
 <ul>
